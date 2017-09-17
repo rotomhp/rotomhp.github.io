@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<head>
+<meta charset="UTF-8"> 
+<!--VITUN IE-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotom homepage</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<script type="text/javascript">
+var width;
+var height;
+var rval=0;
+var point1;
+var point2;
+var target;
+var direction;
+var menus;
+var rform;
+var formlist=new Array("frost", "fan", "mow", "heat", "wash");
+function getw(){
+point1=document.getElementById("p1");
+point2=document.getElementById("p2");
+var rotomu=document.getElementById("rotomu");
+menus=document.getElementsByClassName("menu");
+rform=document.getElementById("forming");
+//cross-browser
+//thanks #stackoverflow http://stackoverflow.com/questions/3012668/get-the-window-height
+   width="innerWidth" in window 
+               ? window.innerWidth
+               : document.documentElement.offsetWidth; 
+   height="innerHeight" in window 
+               ? window.innerHeight
+               : document.documentElement.offsetHeight; 
+}
+var laatikko;
+if(!document.getElementsByClassName){	//JEES KIITOS! http://stackoverflow.com/questions/7410949/javascript-document-getelementsbyclassname-compatibility-with-ie
+  document.getElementsByClassName = function(cl) {
+  	var retnode = [];
+	var elem = this.getElementsByTagName('*');
+	for (var i = 0; i < elem.length; i++) {
+	  if((' ' + elem[i].className + ' ').indexOf(' ' + cl + ' ') > -1) retnode.push(elem[i]);
+  	}
+  return retnode;
+  }; 
+}
+function forms(){
+  //prefix in switch-case because image can be 404
+   var color1; var color2;var prefix;
+   switch(window.location.search){
+	case "?fan":
+		color1="#d6b579";
+		color2="rgba(97, 58, 32, 0.5)";
+		prefix="fan";
+		break;
+	case "?wash":
+		color1="#88bce2";
+		color2="rgba(63, 118, 162, 0.5)";
+		prefix="wash";
+		break;
+	case "?heat":
+		color1="#bb7e91";
+		color2="rgba(123, 38, 51, 0.5)";
+		prefix="heat";
+		break;
+	case "?mow":
+		color1="#89944d";
+		color2="rgba(82, 90, 75, 0.5)";
+		prefix="mow";
+		break;
+	case "?frost":
+		color1="#8b7cb9";
+		color2="rgba(82, 82, 158, 0.5)";
+		prefix="frost";
+		break;
+	default:
+		color1="#88b3af";
+		color2="rgba(25, 60, 70, 0.5)";
+		prefix="";
+		break;
+   }
+  document.getElementsByTagName("body")[0].style.backgroundColor=color1;
+  document.getElementById("p1").style.fill=color2;
+  document.getElementById("p2").style.fill=color2;
+  rotomu.src=prefix+"rotom_standard.svg";
+  rform.href="?"+rforms(prefix);
+}
+var w;var h;
+function wsize(){
+ getw();
+ texts=document.getElementsByClassName("texts");
+  if(width>height){
+	point1.setAttribute("points","0,0 50,0 0,100");
+	point2.setAttribute("points","100,0 100,100 50,100");
+	rval=Math.atan2(height,width*0.5);
+	texts[0].style.top="0";
+	texts[1].style.bottom="0";
+	w="50%";
+	h="100%";
+	menus[1].style.left="50%";
+	menus[0].style.right="50%";
+  }
+  else{
+	point1.setAttribute("points","0,0 100,0 0,50");
+	point2.setAttribute("points","0,100 100,50 100,100");
+	rval=Math.atan2(height*0.5,width);
+	texts[0].style.top="15%";
+	texts[1].style.bottom="15%";
+	h="50%";
+	w="100%";
+	menus[1].style.left="0";
+	menus[0].style.right="0";
+  }
+ if(target!=point1)
+	texts[0].style.transform="rotate(-"+rval+"rad)";
+ if(target!=point2)
+	texts[1].style.transform="rotate(-"+rval+"rad)";
+	menus[1].style.width=w;
+	menus[1].style.height=h;
+	menus[0].style.width=w;
+	menus[0].style.height=h;
+}
+//move things
+function slide(b){
+   if(!target){
+	if(b!=1){
+		target=point1;
+		direction="-100";
+	}
+	else{
+		target=point2;
+		direction="100";
+	}
+	target.style.transform="translate("+direction+"%,0)";
+	target.style.fillOpacity="0";
+	texts[b].style.transform="translate("+direction*1.2+"%,0)";
+	texts[b].style.opacity="0";
+	rotomu.style.opacity="0.4";
+	menus[b].style.visibility="visible";
+	menus[b].style.opacity="1";
+   }
+  else{
+	direction=direction*(-1);
+	target.style.transform="translate(0)";
+	target.style.fillOpacity="1";
+	texts[b].style.transform="rotate(-"+rval+"rad)";
+	texts[b].style.opacity="1";
+	rotomu.style.opacity="1";
+	target=undefined;
+	menus[b].style.visibility="hidden";
+	menus[b].style.opacity="0";
+  }
+}
+function rforms(meh){
+	var indeksi=formlist.indexOf(meh);
+	if(indeksi!=-1){
+		formlist[indeksi]="";
+	}
+	return formlist[Math.floor(Math.random()*5)];
+}
+</script>
+
+</head>
+<body onload="wsize();forms();" onresize="wsize()">
+<div class="bg">
+<div style="width:0;height:100%;display:inline-block;vertical-align:middle;"></div>
+<img id="rotomu" alt="roto">
+<p id="t1" class="texts">STUFFS</p>
+<p id="t2" class="texts">ABOUT</p>
+<svg class="bg" viewBox="0 0 100 100" preserveAspectRatio="none">
+<polygon id="p1" onclick="slide(1);" />
+<polygon id="p2" onclick="slide(0);" />
+</svg>
+<div class="menu" id="menu2" style="right:50%;top:0;visibility:hidden;opacity:0;">
+<div>
+<a href="me.html">WHOIAM<br></a>
+</div>
+</div>
+<div class="menu" id="menu1" style="left:50%;bottom:0;visibility:hidden;opacity:0;">
+<div>
+<a href="../pokemon/">POKEMON3D<br></a>
+<a href="#">POKEBLOG<br></a>
+<a id="forming">#RANDMAIN</a>
+</div>
+</div>
+</div>
+</body>

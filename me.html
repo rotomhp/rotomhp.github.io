@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<head>
+<title>frost rotom</title>
+<style type="text/css">
+html, body{
+	font-family: monospace;
+	margin:0;padding:0;
+}
+body{
+	background:#fdd7d7 url("rdex_s.svg");
+}
+@keyframes moving1{
+  0%,100%{
+	transform:rotate(-5deg) scaleX(0.9) translateX(5%);
+  }
+  50%{
+	transform:rotate(10deg);
+  }
+}
+@keyframes moving2{
+  0%,100%{
+	transform:rotate(5deg) scaleX(0.9) translateX(-5%);
+  }
+  50%{
+	transform:rotate(-10deg);
+  }
+}
+@keyframes splash{
+	0%,100%{
+		transform:rotate(2deg);
+	}
+	50%{
+		transform:rotate(-2deg);
+	}
+}
+#siipi1{
+	animation-name:moving1;
+	transform-origin:bottom right;
+}
+#siipi2{
+	animation-name:moving2;
+	transform-origin:bottom left;
+}
+.siivet{
+	animation-duration:0.2s;
+	animation-iteration-count: infinite;
+}
+#rotom svg{
+	animation-name:splash;
+	animation-duration:1.5s;
+	animation-iteration-count:infinite;
+	margin:5% 0;
+}
+#upper{
+	padding: 0.5% 2%;
+    font-size: 3vw;
+	background-color:#587fd2;
+	color:#fff;
+}
+#rotom{
+	flex:2;
+}
+#contents{
+	background-color:#e6e0c9;
+	margin:0;padding:0;
+	display:flex;
+	height:auto;
+}
+#rotom div{
+	padding: 1% 5%;
+}
+.names{
+    background-color: #f9de5c;
+}
+.lv{
+	background-color:#fff;
+}
+#sum{
+	background-color: #cbdcf5;
+	vertical-align:top;
+	flex:3;
+}
+.fsets{
+	margin:0;padding:0;
+	display:inline-block;
+	font-size: 2.5vw;
+}
+.some{
+	color:red;
+}
+</style>
+</head>
+<body>
+<div id="upper">MY MEMO</div>
+<div id="contents">
+<div id="rotom" class="fsets">
+<div class="names">ROTOM</div>
+<div class="lv"><span style="font-size:80%;">Lv.</span><span>NaN</span></div>
+<svg
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="100%"
+   viewBox="0 0 335 250"
+   id="svg2"
+   version="1.1">
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path4147-9-4"
+     d="m 167.73546,1.131778 c -5.12054,4.0988199 -13.79377,16.91107 -22.42394,43.583474 -11.50054,2.695089 -57.870453,3.933217 -59.736142,13.715938 -7.646516,40.094519 6.523329,162.73405 19.487392,189.94541 41.78109,1.465 83.56217,1.85429 125.34326,0 C 243.37009,221.16524 257.54205,98.525709 249.89553,58.43119 248.02985,48.648469 201.65994,47.410341 190.15939,44.715252 181.52922,18.042848 172.856,5.2305979 167.73546,1.131778 Z"
+     style="fill:#b98ac0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+ class="siivet" id="siipi1"
+     d="M 92.242866,177.58336 60.996204,203.2556 53.548271,198.34868 52.215205,155.54325 C 28.140485,136.26836 24.932961,137.81121 13.735513,129.92514 L 3.310384,44.810339 c 26.379852,28.23688 37.045071,36.901391 78.606291,92.063621 l -14.033683,36.90585 3.359093,1.43556 19.694071,-9.85353"
+     style="fill:#b98ac0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path
+     style="fill:#b98ac0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 243.31038,177.58336 31.24667,25.67224 7.44793,-4.90692 1.33307,-42.80543 c 24.07472,-19.27489 27.28224,-17.73204 38.47969,-25.61811 l 10.42513,-85.114801 c -26.37986,28.23688 -37.04507,36.901391 -78.6063,92.063621 l 14.03369,36.90585 -3.3591,1.43556 -19.69407,-9.85353"
+ class="siivet" id="siipi2" />
+  <path
+     id="path4147-9"
+     d="m 167.73545,9.8808594 c -4.72201,3.8633606 -11.15294,15.9396076 -18.13086,41.0798056 -9.29876,2.540268 -55.914282,3.707272 -57.634766,12.92802 -7.051394,37.791275 6.015623,153.385735 17.970706,179.033925 38.5293,1.38084 77.05859,1.74777 115.58789,0 11.95508,-25.64819 25.02405,-141.24265 17.97265,-179.033925 -1.72048,-9.220748 -48.336,-10.387752 -57.63476,-12.92802 C 178.88839,25.820467 172.45746,13.74422 167.73545,9.8808594 Z"
+     style="fill:#e3694d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <g
+     id="g4216-1-3"
+     transform="matrix(-0.79993722,0.42949522,0.53174736,0.7236495,101.67132,-380.23085)">
+    <ellipse
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4180-1-2"
+       cx="254.81857"
+       cy="462.689"
+       rx="15.311307"
+       ry="28.761969" />
+    <ellipse
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#70548f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4182-0-3"
+       cx="255.19208"
+       cy="462.689"
+       rx="10.109334"
+       ry="19.900253" />
+    <rect
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#70548f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4214-5-8"
+       width="30.790831"
+       height="3.378804"
+       x="239.48631"
+       y="461.46783" />
+  </g>
+  <path
+     id="path4147-9-7"
+     d="M 167.73633 109.48438 C 142.39988 109.48438 93.343601 112.85166 90.433594 113.05273 C 90.489804 114.37664 90.541144 115.6914 90.607422 117.03516 C 93.920224 116.80656 140.51215 113.62068 166.10742 113.49023 L 166.10742 197.98438 C 143.50758 198.06254 102.84 199.81462 99.443359 199.96289 C 99.64523 201.18011 99.845308 202.40968 100.05078 203.59766 C 103.70587 203.43898 126.44562 202.47016 146.94336 201.95508 A 20.838856 17.305828 0 0 0 167.91406 218.19727 A 20.838856 17.305828 0 0 0 188.50977 201.95508 C 209.01021 202.47 231.76034 203.43879 235.41992 203.59766 C 235.62541 202.40968 235.82546 201.18011 236.02734 199.96289 C 232.6257 199.8144 191.96351 198.06254 169.36523 197.98438 L 169.36523 113.49023 C 194.95889 113.62066 241.54536 116.80621 244.86328 117.03516 C 244.92958 115.6914 244.98089 114.37664 245.03711 113.05273 C 242.12177 112.85129 193.0713 109.48438 167.73633 109.48438 z "
+     style="fill:#583e32;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <g
+     id="g4216-1-3-6"
+     transform="matrix(0.79993722,0.42949522,-0.53174736,0.7236495,233.79938,-380.23085)">
+    <ellipse
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4180-1-2-4"
+       cx="254.81857"
+       cy="462.689"
+       rx="15.311307"
+       ry="28.761969" />
+    <ellipse
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#70548f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4182-0-3-0"
+       cx="255.19208"
+       cy="462.689"
+       rx="10.109334"
+       ry="19.900253" />
+    <rect
+       transform="matrix(0.99915959,0.04098926,0.04224664,0.99910721,0,0)"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#70548f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4214-5-8-0"
+       width="30.790831"
+       height="3.378804"
+       x="239.48631"
+       y="461.46783" />
+  </g>
+  <ellipse
+     cx="187.73535"
+     cy="144.07933"
+     rx="11.140395"
+     ry="25.205587"
+     id="path4204-2-3"
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#eb9b74;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+  <ellipse
+     style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#eb9b74;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+     id="ellipse4304"
+     ry="25.205587"
+     rx="11.140395"
+     cy="144.07933"
+     cx="147.73535" />
+  <path
+     id="path4356"
+     d="m 153.76796,107.51185 c 12.65707,-14.518448 17.73318,-10.007968 29.54885,-0.78986 -17.25224,-10.018012 -19.02419,-5.25285 -29.54885,0.78986 z"
+     style="fill:#583e32;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+</svg>
+<div class="names">Item</div>
+<div class="lv">Nothing :(</div>
+</div><div id="sum" class="fsets"><div style="padding:5%;">
+<span class="some">Nerdy</span> nature.<br>
+Apr. 00, 1990<br>
+<span class="some">Route 15000</span><br>
+Met at Lv. 24.<br><br>
+Highly curious.<br>
+Happily eats anything.<br>
+Doesn't like <span class="some">sour</span> food.
+</div></div>
+</div>
+</body>
