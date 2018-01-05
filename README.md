@@ -1,5 +1,7 @@
 # rotomhp.github.io/httpkmn
+
 *** Read me before contribute HTTP Pokémon Status Project! ***
+
 Image should be...
 * Animated gif
 * From the <b>official anime</b> (main series, movie, mystery dungeon...), but not fanart.
