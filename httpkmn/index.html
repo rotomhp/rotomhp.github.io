@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<head>
+<title>HTTP Pokémon status</title>
+<script type="text/javascript">
+var box;
+var imgbox;
+function init(){
+	box=document.getElementById("box");
+	imgbox=box.getElementsByTagName("img")[0];
+}
+function showit(elem){
+	box.style.display="block";
+	imgbox.src=elem.src;
+}
+function tolist(){
+	box.style.display="none";
+	imgbox.src="";
+}
+</script>
+<style type="text/css">
+	html,head,body{
+		padding:0;margin:0;
+		font-family:Sans-serif;
+		text-align:center;
+		vertical-align:middle;
+	}
+	a:link, a:visited{
+		color:#2588a7;
+		text-decoration:none;
+	}
+	a:hover, a:active{
+		font-weight:bold;
+	}
+	#subject{
+		margin-top:30px;
+		font-size:3em;
+	}
+	#cover{
+		margin:20px 0px;
+		
+	}
+	.cell{
+		background-color:black;
+		width:200px;height:200px;
+		overflow:hidden;
+		margin:10px;padding:10px;
+		display:inline-block;
+		text-align:center;
+	}
+	.cell img{
+		width:200px;height:150px;
+		margin:0;padding:0;
+	}
+	.cell, .cell img{
+		border-radius:10px;
+	}
+	.cell div{
+		color:white;
+		height:50px;
+		font-size:17px;
+		margin:0;padding:0;
+	}
+	.num{
+		font-size:25px;
+	}
+	.pkmn{
+		color:#bcafe0;
+	}
+	.smalltxt{
+		font-size:25px;
+	}
+	#box{
+		position:fixed;
+		left:0;right:0;top:0;bottom:0;
+		background-color:rgba(0,0,0,0.9);
+	}
+	#imgbox{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+</style>
+</head>
+<body onload="init()">
+	<div id="subject">HTTP Status Pokémon</div>
+	<div class="smalltxt">Click image to open/close</div>
+<div id="cover">
+	<div class="cell">
+		<img src="100.gif" onclick="showit(this)" alt="Voltorb">
+		<div><span class="num">100</span><span class="pkmn"> / Voltorb</span><br><span>Continue</span></div>
+	</div>
+	<div class="cell">
+		<img src="200.gif" onclick="showit(this)" alt="Misdreavus">
+		<div><span class="num">200</span><span class="pkmn"> / Misdreavus</span><br><span>OK</span></div>
+	</div>
+	<div class="cell">
+		<img src="201.gif" onclick="showit(this)" alt="Unown">
+		<div><span class="num">201</span><span class="pkmn"> / Unown</span><br><span>Created</span></div>
+	</div>
+	<div class="cell">
+		<img src="202.gif" onclick="showit(this)" alt="Wobbuffet">
+		<div><span class="num">202</span><span class="pkmn"> / Wobbuffet</span><br><span>Accepted</span></div>
+	</div>
+	<div class="cell">
+		<img src="207.gif" onclick="showit(this)" alt="Gligar">
+		<div><span class="num">207</span><span class="pkmn"> / Gligar</span><br><span>Multi-Status</span></div>
+	</div>
+	<div class="cell">
+		<img src="300.gif" onclick="showit(this)" alt="Skitty">
+		<div><span class="num">300</span><span class="pkmn"> / Skitty</span><br><span>Multiple Choices</span></div>
+	</div>
+	<div class="cell">
+		<img src="302.gif" onclick="showit(this)" alt="Sableye">
+		<div><span class="num">302</span><span class="pkmn"> / Sableye</span><br><span>Found</span></div>
+	</div>
+	<div class="cell">
+		<img src="303.gif" onclick="showit(this)" alt="Mawile">
+		<div><span class="num">300</span><span class="pkmn"> / Mawile</span><br><span>See other</span></div>
+	</div>
+	<div class="cell">
+		<img src="403.gif" onclick="showit(this)" alt="Shinx">
+		<div><span class="num">403</span><span class="pkmn"> / Shinx</span><br><span>Forbidden</span></div>
+	</div>
+	<div class="cell">
+		<img src="404.gif" onclick="showit(this)" alt="Luxio">
+		<div><span class="num">404</span><span class="pkmn"> / Luxio</span><br><span>Not Found</span></div>
+	</div>
+	<div class="cell">
+		<img src="405.gif" onclick="showit(this)" alt="Luxray">
+		<div><span class="num">405</span><span class="pkmn"> / Luxray</span><br><span>Method not allowed</span></div>
+	</div>
+	<div class="cell">
+		<img src="408.gif" onclick="showit(this)" alt="Cranidos">
+		<div><span class="num">408</span><span class="pkmn"> / Cranidos</span><br><span>Request Timeout</span></div>
+	</div>
+	<div class="cell">
+		<img src="409.gif" onclick="showit(this)" alt="Rampardos">
+		<div><span class="num">409</span><span class="pkmn"> / Rampardos</span><br><span>Conflict</span></div>
+	</div>
+	<div class="cell">
+		<img src="410.gif" onclick="showit(this)" alt="Shieldon">
+		<div><span class="num">410</span><span class="pkmn"> / Shieldon</span><br><span>Gone</span></div>
+	</div>
+	<div class="cell">
+		<img src="412.gif" onclick="showit(this)" alt="Burmy">
+		<div><span class="num">412</span><span class="pkmn"> / Burmy</span><br><span>Precondition failed</span></div>
+	</div>
+	<div class="cell">
+		<img src="413.gif" onclick="showit(this)" alt="Wormadam">
+		<div><span class="num">413</span><span class="pkmn"> / Wormadam</span><br><span>Request entry too large</span></div>
+	</div>
+	<div class="cell">
+		<img src="417.gif" onclick="showit(this)" alt="Pachirisu">
+		<div><span class="num">417</span><span class="pkmn"> / Pachirisu</span><br><span>Expectation failed</span></div>
+	</div>
+	<div class="cell">
+		<img src="418.gif" onclick="showit(this)" alt="Buizel">
+		<div><span class="num">418</span><span class="pkmn"> / Buizel</span><br><span>I'm a teapot</span></div>
+	</div>
+	<div class="cell">
+		<img src="423.gif" onclick="showit(this)" alt="Gastrodon">
+		<div><span class="num">423</span><span class="pkmn"> / Gastrodon</span><br><span>Locked</span></div>
+	</div>
+	<div class="cell">
+		<img src="425.gif" onclick="showit(this)" alt="Drifloon">
+		<div><span class="num">425</span><span class="pkmn"> / Drifloon</span><br><span>Unordered Collection</span></div>
+	</div>
+	<div class="cell">
+		<img src="426.gif" onclick="showit(this)" alt="Drifblim">
+		<div><span class="num">426</span><span class="pkmn"> / Drifblim</span><br><span>Upgrade required</span></div>
+	</div>
+	<div class="cell">
+		<img src="444.gif" onclick="showit(this)" alt="Gabite">
+		<div><span class="num">444</span><span class="pkmn"> / Gabite</span><br><span>No Response</span></div>
+	</div>
+	<div class="cell">
+		<img src="500.gif" onclick="showit(this)" alt="Emboar">
+		<div><span class="num">500</span><span class="pkmn"> / Emboar</span><br><span>Internal Server Error</span></div>
+	</div>
+</div>
+<div id="box" style="display:none;">
+	<img id="imgbox" src="" alt="Selected gif" onclick="tolist()"></div>
+<div class="smalltxt">All screenshots are licensed. You can contriubte <a href="#">here</a>.</div>
+</body>
